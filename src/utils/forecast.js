@@ -1,8 +1,8 @@
 const request = require("request");
-const ACCESS_KEY = "2f3720fac48fe1812fed249b39d2eeea";
+const { ACCESS_KEY_WEATHERSTACK } = require("../../config");
 
 function forecast({ latitude, longitude }, callback) {
-  const url = `http://api.weatherstack.com/current?access_key=${ACCESS_KEY}&query=${latitude},${longitude}&units=m`;
+  const url = `http://api.weatherstack.com/current?access_key=${ACCESS_KEY_WEATHERSTACK}&query=${latitude},${longitude}&units=m`;
   request({ url, json: true }, (error, { body }) => {
     if (error) {
       callback("Unable to connect", undefined);

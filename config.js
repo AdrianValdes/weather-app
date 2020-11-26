@@ -1,0 +1,4 @@
+module.exports = {
+  ACCESS_KEY_GEOCODE: process.env.ACCESS_KEY_GEOCODE,
+  ACCESS_KEY_WEATHERSTACK: process.env.ACCESS_KEY_WEATHERSTACK,
+};

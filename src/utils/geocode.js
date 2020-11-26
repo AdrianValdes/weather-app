@@ -1,13 +1,11 @@
 const request = require("request");
-const ACCESS_TOKEN =
-  "pk.eyJ1IjoiYWRyaWFudmFsZGVzIiwiYSI6ImNraHcybW56bTFzcmwyc2t6aG00ZzBtYXQifQ.TMNph6be1vXRvkUVjam8VQ";
-
+const { ACCESS_KEY_GEOCODE } = require("../../config");
 const URLGEOAPI = `https://api.mapbox.com/geocoding/v5/mapbox.places/`;
 
 const geocode = (address, callback) => {
   const urlGeo = `${URLGEOAPI}${encodeURIComponent(
     address
-  )}.json?access_token=${ACCESS_TOKEN}&limit=1`;
+  )}.json?access_token=${ACCESS_KEY_GEOCODE}&limit=1`;
 
   request({ url: urlGeo, json: true }, (error, { body }) => {
     if (error) {
