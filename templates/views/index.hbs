@@ -10,12 +10,15 @@
 </head>
 
 <body>
+    {{>header  }}
     <main class="main-content">
-        {{>header  }}
-        <h2>Use this page to get the Weather </h2>
+        <h1>{{ title }}</h1>
         <form id="form" action="">
-            <input id="searchInput" type="text" placeholder="Location">
-            <button>Search</button>
+            <h2>Use this page to get the Weather </h2>
+            <div class="input-wrapper">
+                <input id="searchInput" type="text" placeholder="Location">
+                <button>Search</button>
+            </div>
         </form>
         <div id="dataDiv"></div>
 

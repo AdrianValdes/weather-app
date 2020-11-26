@@ -1,7 +1,5 @@
 console.log("It works");
 
-const url = `http://localhost:3000/weather?address=%22La%20Habana,%20Cuba%22`;
-
 async function fetchData(url) {
   try {
     let response = await fetch(url);
@@ -15,6 +13,7 @@ const dataDiv = document.getElementById("dataDiv");
 const form = document.getElementById("form");
 const searchInput = document.getElementById("searchInput");
 const descriptionP = document.createElement("p");
+descriptionP.style.width = "650px";
 dataDiv.appendChild(descriptionP);
 
 form.addEventListener("submit", async (e) => {
