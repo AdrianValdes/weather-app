@@ -65,6 +65,6 @@ footer {
   font-size: 12px;
 }
 
-.portrait {
-  display: inline-block;
+p {
+  line-height: 1.5;
 }

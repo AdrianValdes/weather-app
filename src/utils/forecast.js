@@ -9,8 +9,22 @@ function forecast({ latitude, longitude }, callback) {
     } else if (body.error) {
       callback(body.error.info, undefined);
     } else {
-      let { weather_descriptions, temperature, precip } = body.current;
-      callback(undefined, { weather_descriptions, temperature, precip });
+      let {
+        weather_descriptions,
+        temperature,
+        precip,
+        humidity,
+        feelslike,
+        wind_speed,
+      } = body.current;
+      callback(undefined, {
+        weather_descriptions,
+        temperature,
+        precip,
+        humidity,
+        feelslike,
+        wind_speed,
+      });
     }
   });
 }
