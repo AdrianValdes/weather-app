@@ -27,7 +27,7 @@ form.addEventListener("submit", async (e) => {
   let { description, error } = await fetchData(
     `/weather?address=${locationToSearch}`
   );
-
+  searchInput.value = "";
   renderData({ description, error });
 });
 

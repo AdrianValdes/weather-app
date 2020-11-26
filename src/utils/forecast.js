@@ -17,6 +17,7 @@ function forecast({ latitude, longitude }, callback) {
         feelslike,
         wind_speed,
       } = body.current;
+
       callback(undefined, {
         weather_descriptions,
         temperature,

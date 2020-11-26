@@ -69,8 +69,8 @@ app.get("/weather", (req, res) => {
             location,
             description: `The weather in ${location} is ${weather_descriptions[0]}. 
             It is currently ${temperature} degrees out, but it feels like ${feelslike}! So be careful. 
-            There is a humidity of ${humidity}% and the wind speed is the exactly ${wind_speed} km/h. 
-            There is ${precip}% chance of rain, so decide if you want to go out or not`,
+            There is a humidity of ${humidity}% and the wind speed is exactly ${wind_speed} km/h. 
+            There is ${precip}% chance of rain, decide if you want to go out or not`,
           });
         }
       );
