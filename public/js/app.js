@@ -25,7 +25,7 @@ form.addEventListener("submit", async (e) => {
   }
   descriptionP.textContent = "Loading...";
   let { description, error } = await fetchData(
-    `http://localhost:3000/weather?address=${locationToSearch}`
+    `/weather?address=${locationToSearch}`
   );
 
   renderData({ description, error });
